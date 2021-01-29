@@ -1,0 +1,24 @@
+include head.pug
+
+<div id="content">
+    <section>
+        <h3>Wszystkie spotkania</h3>
+        - var data = locals.db_results;
+        table(class="table table-striped")
+            thead(class="thead-light")
+                tr
+                    th zwierzę
+                    th ilość
+                    th opis
+                    th data
+            tbody
+                each survey in data
+                    tr
+                        td #{survey.animal}
+                        td #{survey.quantity}
+                        td #{survey.description}
+                        td #{survey.date.getDate()}.#{survey.date.getMonth()+1}.#{survey.date.getFullYear()}
+    </section>
+</div>
+
+include footer.pug

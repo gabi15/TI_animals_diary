@@ -1,0 +1,28 @@
+include head.pug
+
+<div id="content">
+	<section>
+		<h3>Ankieta</h3>
+		<form id="survey_form">
+			<label for="animals">Zwierzątko:</label><br>
+			<select class="form-control" name="animal" id="animals">
+				<option value="dog">piesek</option>
+				<option value="duck">kaczuszka</option>
+				<option value="cat">kot</option>
+				<option value="squirrel">wiewióra</option>
+				<option value="hedgehog">jeżyk</option>
+			</select>
+			<br>
+			<label for="quantity">Liczba spotkanych zwierzątek</label>
+			<br>
+			<input type="number" min = "1" id="quantity" name="quantity" required><br>
+			<label for="feelings">Jak bardzo to spotkanie poprawiło twój dzień?</label><br>
+			<textarea id="feelings" name="feelings" rows="4" cols="55" placeholder="tu możesz napisać sowje pozytwne odczucia i szczegóły spotkania"></textarea>
+			<br>
+			<input type="button" class="btn btn-success" value="Zapisz" id="save_locally">
+		</form>
+	</section>
+</div>
+
+
+include footer.pug

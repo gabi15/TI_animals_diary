@@ -1,0 +1,70 @@
+body {
+    background-color: #a8eb8e;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    color: #444;
+}
+
+header {
+    background-color: #43a317;
+    color: #fefefe;
+}
+header > h1 {
+    padding-top: 8px;
+    margin: 0;
+    text-align: center;
+}
+
+
+.header-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 16px;
+    color: #fefefe;
+}
+
+.header-link:hover {
+    background-color: #72e046;
+    text-decoration: none;
+    color: #fff;
+}
+
+#login, #logout, #rejestracja {
+    float: right;
+}
+
+#content {
+    margin:3em;
+    margin-bottom: 5em;
+    padding:1em;
+    border-radius: 0.5em;
+    background-color: #fefefe;
+}
+
+section {
+    border-bottom: solid 1px #ddd;
+    padding-bottom:1em;
+}
+
+.row {
+    display: block;
+    margin-bottom: 1em;
+    width: 300px;
+}
+
+input {
+    padding: 4px 8px;
+    border-radius: 8px;
+    border: solid 1px #ddd;
+}
+
+
+
+/* .btn {
+    background-color: #03790d;
+} */
+
+th,td{
+    text-align: center;
+}

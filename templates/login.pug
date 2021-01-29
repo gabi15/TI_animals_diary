@@ -1,0 +1,23 @@
+include head.pug
+
+<div id="content">
+	<section>
+		<h3>Zaloguj się</h3>
+		<form id="login_form">
+			<div class="row">
+				<label for="userName">Login:‏‏‎</label>
+				<input type="text" id="username" name="username" placeholder="nazwa użytkownika" required>
+			</div>
+
+			<div class="row">
+				<label for="pass">Hasło:</label>
+				<input type="password" id="pass" name="pass" placeholder="hasło" required>
+			</div>
+			<div class="row">
+				<input type="submit" class="btn btn-success" value="Zaloguj">
+			</div>
+		</form>
+	</section>
+</div>
+
+include footer.pug

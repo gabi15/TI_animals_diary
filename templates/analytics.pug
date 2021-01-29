@@ -1,0 +1,21 @@
+include head.pug
+
+<div id="content">
+	<section>
+		<h3>Podsumowanie</h3>
+		<div class="wrapper">
+		<button type="button" class="btn btn-success" id="draw_chart">Rysuj</button>
+			<p>1. Jakie zwierzątka spotkałeś?</p>
+			<canvas id="chart01" width="800" height="400"></canvas>
+
+			<p>2. Podsumowanie dzienne - wybierz datę z kalendarza</p>
+			<form id="chart2_form">
+				<input type="date" id="date" required="true">
+				<button type="submit" class="btn btn-success" id="draw_chart2">Rysuj</button>
+			</form>
+			<canvas id="chart02" width="800" height="400"></canvas>
+		</div>
+	</section>
+</div>
+
+include footer.pug
