@@ -12,6 +12,7 @@ const User = require('./models/Users');
 
 const app = express();
 app.use(cors())
+app.set('trustproxy', true);
 
 // constants
 const dbname = 'animals';
