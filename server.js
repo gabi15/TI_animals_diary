@@ -14,8 +14,10 @@ const app = express();
 app.use(cors())
 
 // constants
-const dbname = 'mydb';
-const url= 'mongodb://127.0.0.1/mydb';
+const dbname = 'animals';
+const user = 'gabi';
+const password = 'x12345';
+const url= 'mongodb+srv://gabi:'+password+'@cluster0.aerre.mongodb.net/'+dbname+'?retryWrites=true&w=majority'
 const port = 4106;
 
 let db;
@@ -45,7 +47,7 @@ var auth = function(req, res, next) {
 
 
 // start server
-app.listen(port,function() {
+app.listen(process.env.PORT || port,function() {
     console.log('listening on ' + port);
  })
 
