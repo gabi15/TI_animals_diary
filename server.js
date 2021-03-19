@@ -6,6 +6,7 @@ const session = require('express-session');
 var cors = require('cors')
 var mongoose = require('mongoose')
 const pug = require('pug');
+require('dotenv').config();
 
 const Animals = require('./models/Animals');
 const User = require('./models/Users');
@@ -14,15 +15,13 @@ const app = express();
 app.use(cors())
 app.set('trustproxy', true);
 
-// constants
-const dbname = 'animals';
-const user = 'gabi';
-const password = 'x12345';
-const url= 'mongodb+srv://gabi:'+password+'@cluster0.aerre.mongodb.net/'+dbname+'?retryWrites=true&w=majority'
+
+const url= 'mongodb+srv://'+process.env.USER+':'+process.env.PASSWORD+'@cluster0.aerre.mongodb.net/'+process.env.DB_NAME+'?retryWrites=true&w=majority'
 const port = 4106;
 
 let db;
-
+console.log(process.env.USER)
+console.log('AAAA')
 
 // config
 app.use(bodyParser.json());
