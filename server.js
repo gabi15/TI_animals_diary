@@ -58,6 +58,10 @@ app.get('/style.css', function(req,res) {
     res.sendFile(__dirname + '/style.css');
  })
 
+ app.get('/ajax_analytics.js', function(req,res) {
+    res.sendFile(__dirname + '/ajax_analytics.js');
+ })
+
  app.get('/ajax.js', function(req,res) {
     res.sendFile(__dirname + '/ajax.js');
  })
@@ -157,9 +161,15 @@ app.get('/register', function(req,res) {
         try{
             const savedUser = await user.save();
             res.json(savedUser)
+            //result = pug.renderFile('templates/login.pug');
+            //res.status(200).send(result);
+           // window.location.href="/login";
+
         }
         catch(err) {
-            res.json({message: err})
+            console.log('aaa');
+            console.log(err);
+            //res.json({message: err})
         }
     }
     else{
